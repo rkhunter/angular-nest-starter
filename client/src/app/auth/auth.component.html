@@ -1,0 +1,24 @@
+<div class="auth-wrapper">
+  <mat-card class="auth-form">
+    <form [formGroup]="loginForm" novalidate (submit)="login()">
+      <mat-form-field>
+        <input required placeholder="Username" matInput formControlName="username">
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          type="password"
+          required
+          placeholder="Password"
+          matInput
+          formControlName="password">
+      </mat-form-field>
+      <button
+        color="primary"
+        mat-raised-button
+        [disabled]="loginForm.invalid">
+        Войти
+      </button>
+      <a mat-button class="reg-link" routerLink="/registration">Регистрация</a>
+    </form>
+  </mat-card>
+</div>

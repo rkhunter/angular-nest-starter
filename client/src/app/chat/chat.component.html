@@ -1,0 +1,17 @@
+<mat-card *ngIf="chatMessages.length > 0;" class="chat">
+  <div class="chat-message" *ngFor="let message of chatMessages">
+    <span class="nickname">{{ message.nickname }}</span>
+    <span class="message">{{ message.message }}</span>
+    <span class="dateMessage">{{ message.created | date: 'short'}}</span>
+  </div>
+</mat-card>
+<mat-card class="chat-inputs">
+  <form [formGroup]="messageForm" (submit)="send()">
+    <mat-form-field>
+      <input required matInput formControlName="messageControl">
+    </mat-form-field>
+    <button [disabled]="messageForm.invalid" mat-mini-fab>
+      <mat-icon>send</mat-icon>
+    </button>
+  </form>
+</mat-card>
