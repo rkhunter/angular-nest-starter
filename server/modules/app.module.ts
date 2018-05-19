@@ -6,7 +6,7 @@ import { MessagesModule } from './messages/messages.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://mongodbhost/chat'),
+    MongooseModule.forRoot('mongodb://localhost/chat'),
     AuthModule,
     UsersModule,
     MessagesModule
