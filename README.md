@@ -10,7 +10,8 @@ source ./add_aliases.sh
 ```
 source ./add_aliases.sh
 nc server npm i # Install required modules once
-nc server npm start # Node Server```
+nc server npm start # Node Server
+```
 
 # Tab 3
 ```
